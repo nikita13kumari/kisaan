@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | Kisaan</title>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Arimo|Hind:300|Open+Sans+Condensed:300" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <h1>Kisaan</h1>
+    </div>
+    <div class="functions">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <!-- About Section -->
+  <div class="about-container">
+    <div class="about-text">
+      <h2>About Our Crop Prediction Tool</h2>
+      <p>
+        Kisaan is a smart agriculture tool that uses machine learning to help farmers and agri-enthusiasts 
+        predict the most suitable crop to grow based on soil conditions, temperature, humidity, and rainfall.
+      </p>
+      <p>
+        Our goal is to enhance productivity, support sustainable farming, and empower farmers with technology.
+        The model uses real-time data and patterns to give reliable crop suggestions.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="{{ url_for('static', filename='pexels-timmossholder-974314 (1).jpg') }}" alt="Farming Field">
+    </div>
+  </div>
+
+
+
+
+<h1 id="predi">{{ prediction_text }}</h1>
+  <!-- Services Section -->
+  <div class="section">
+    <h1>Our Services</h1>
+    <div class="services">
+      <div class="service-card">
+        <img src="static\farm.jpg" alt="Pesticide Service">
+        <h3>Pesticide Guidance</h3>
+        <p>Get expert advice on the right pesticide usage to protect your crops and boost yield safely.</p>
+      </div>
+      <div class="service-card">
+        <img src="static\farm.jpg" alt="Assistance">
+        <h3>1-on-1 Assistance</h3>
+        <p>100+ agricultural advisors ready to support you at every step of the farming journey.</p>
+      </div>
+      <div class="service-card">
+        <img src="static\farm.jpg" alt="Prediction Tool">
+        <h3>Free Crop Prediction</h3>
+        <p>Use our free ML-powered prediction tool and make smarter farming decisions, easily and quickly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2025 Kisaan - All rights reserved.</p>
+  </div>
+
+</body>
+</html>

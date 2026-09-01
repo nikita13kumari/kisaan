@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crop Prediction | Kisaan</title>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Arimo|Hind:300|Open+Sans+Condensed:300" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+ <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+      font-family: sans-serif;
+    }
+
+    .scroller {
+      display: flex;
+      height: 100vh;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+    }
+
+    .section {
+      min-width: 100vw;
+      height: 100vh;
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      color: white;
+      position: relative;
+    }
+
+    .section1 { background: #1abc9c; }
+    .section2 { background: #000; } /* Black background for video */
+   .section3 {
+  background-image: url("static/front-view-senior-couple-harvesting-tomatoes.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+    .section4 { background: #e74c3c; }
+
+    /* Responsive video */
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .scroller::-webkit-scrollbar {
+      display: none;
+    }
+    .welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(185, 211, 168);
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 20px 20px 10px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+ 
+   <div class="header">
+    <div class="logo">
+      <h1>Kisaan</h1>
+    </div>
+    <div class="functions">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </div>
+
+
+<div class="scroller">
+  
+    
+    <div class="section section2">
+      <video autoplay muted loop playsinline>
+        <source src="static\2758322-uhd_3840_2160_30fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="welcome-text">Welcome to Kisaan </div>
+    </div>
+    
+    
+    
+    
+  </div>
+  <!-- Main Form Section -->
+  <div class="login">
+    <h1>Crop Prediction Model</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+      <input type="text" name="Nitrogen" placeholder="Nitrogen" required>
+      <input type="text" name="Phosphorus" placeholder="Phosphorus" required>
+      <input type="text" name="Potassium" placeholder="Potassium" required>
+      <input type="text" name="temperature" placeholder="Temperature" required>
+      <input type="text" name="humidity" placeholder="Humidity" required>
+      <input type="text" name="pH" placeholder="pH" required>
+      <input type="text" name="rainfall" placeholder="Rainfall" required>
+      <button type="submit">Predict</button>
+    </form>
+
+    <h1 id="predi">{{ prediction_text }}</h1>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2025 Kisaan - All rights reserved.</p>
+    
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Kisaan Platform</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1529101091764-c3526daf38fe');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #fff;
+    }
+    
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 100, 0, 0.8);
+  color: white;
+  padding: 20px 50px;
+}
+
+.logo h1 {
+  font-family: 'Pacifico', cursive;
+  margin: 0;
+}
+
+
+.functions {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 28px;
+  width: 40%;
+}
+
+.functions a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.functions a:hover {
+  color: #ddd;
+}
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 40px;
+      max-width: 600px;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+
+    .card h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #00ff88;
+    }
+
+    .info {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .info p {
+      margin: 10px 0;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    a {
+      color: #00ff88;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 25px;
+      }
+      .card h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="overlay">
+  <div class="card">
+    <h1>📞 Contact Us</h1>
+    <div class="info">
+      <p><strong>📍 Address:</strong> BIT Mesra, Ranchi</p>
+      <p><strong>📞 Phone 1:</strong> +91 8432070008</p>
+      <p><strong>📞 Phone 2:</strong> +91 8368747835</p>
+      <p><strong>📧 Email:</strong> support@kisaanplatform.in</p>
+    </div>
+
+    <div class="back-link">
+      <a href="{{ url_for('Home') }}">← Back to Home</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
