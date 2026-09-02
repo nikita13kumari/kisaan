@@ -22,7 +22,7 @@ It uses a **Random Forest Classifier** trained on agricultural data from Kaggle 
 
 ## 🛠️ Tech Stack
 - **Backend:** Python, Flask
-- **Machine Learning:** Scikit-learn (Random Forest)
+- **Machine Learning:** Scikit-learn (Decision Tree)
 - **Frontend:** HTML, CSS, Bootstrap
 - **Dataset:** Kaggle - Crop Recommendation Dataset
 
