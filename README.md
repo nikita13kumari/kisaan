@@ -1,7 +1,7 @@
 # 🌾 Kisaan - Crop Prediction System
 
 Kisaan is a **web-based crop recommendation system** that helps farmers decide the most suitable crop to grow based on **soil nutrients** and **environmental conditions**.  
-It uses a **Random Forest Classifier** trained on agricultural data from Kaggle to make accurate predictions.
+It uses a **Decision Tree Classifier** trained on agricultural data from Kaggle to make accurate predictions.
 
 ---
 
